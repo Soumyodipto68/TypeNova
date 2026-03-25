@@ -1,6 +1,6 @@
 const TypingBox = ({ text, input, handleChange, handleKeyDown }) => {
   return (
-    <div className="p-4 border rounded-lg">
+    <div className="p-4 rounded-lg">
       <p className="mb-4 text-lg">
         {text.split("").map((char, i) => {
           let color = "";
@@ -18,8 +18,8 @@ const TypingBox = ({ text, input, handleChange, handleKeyDown }) => {
       <textarea
         value={input}
         onChange={handleChange}
-        onKeyDown={handleKeyDown}   // 👈 important
-        className="w-full p-2 border rounded"
+        onKeyDown={handleKeyDown} 
+        className="w-full p-2  rounded"
         placeholder="Start typing... (Press Enter to submit)"
       />
     </div>

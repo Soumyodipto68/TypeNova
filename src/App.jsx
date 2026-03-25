@@ -22,8 +22,6 @@ function App() {
     resetGame,
     stopTimer,
   } = useTyping(text);
-
-  // 🔁 Reset typing when paragraph changes
   useEffect(() => {
     resetGame();
   }, [selectedIndex]);
@@ -41,8 +39,8 @@ function App() {
       <div className="flex-1 p-6 flex flex-col items-center">
         
         {/* Title */}
-        <h1 className="text-3xl font-bold mb-4">
-          ⌨️ TypeSprint
+        <h1 className="text-4xl font-bold mb-4">
+          TypeNova
         </h1>
 
         {/* Timer */}
