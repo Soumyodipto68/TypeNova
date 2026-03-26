@@ -11,7 +11,7 @@ const Sidebar = ({ selectedIndex, setSelectedIndex }) => {
           onClick={() => setSelectedIndex(index)}
           className={`p-3 mb-3 rounded cursor-pointer transition ${
             selectedIndex === index
-              ? "bg-yellow-400 text-black"
+              ? "bg-green-400 text-black"
               : "bg-gray-800 hover:bg-gray-700"
           }`}
         >
