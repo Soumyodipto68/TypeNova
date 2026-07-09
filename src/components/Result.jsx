@@ -1,47 +1,50 @@
 import { useState, useEffect } from "react";
-import { getPersonalBest, updatePersonalBest } from "../utils/personalBest";
+import { updatePersonalBest } from "../utils/personalBest";
 
 const Result = ({ wpm, accuracy }) => {
   const [personalBest, setPersonalBest] = useState(null);
-  const [newRecords, setNewRecords] = useState({ wpm: false, accuracy: false });
 
   useEffect(() => {
     const result = updatePersonalBest(wpm, accuracy);
     setPersonalBest(result.personalBest);
-    setNewRecords({
-      wpm: result.newWPMRecord,
-      accuracy: result.newAccuracyRecord
-    });
   }, [wpm, accuracy]);
 
   if (!personalBest) return null;
 
   return (
-    <div className="mt-6 bg-gray-800 p-6 rounded-lg max-w-2xl w-full">
-      <h2 className="text-2xl font-bold mb-4">📊 Test Results</h2>
-      
-      <div className="grid grid-cols-2 gap-4">
-        {/* Current Results */}
-        <div className="bg-gray-700 p-4 rounded">
-          <h3 className="text-sm text-gray-300 mb-2">Current Test</h3>
-          <p className="text-2xl font-bold text-blue-400">{wpm} WPM</p>
-          <p className="text-lg text-green-400">{accuracy}% Accuracy</p>
+    <div className="w-full max-w-2xl rounded-[24px] border border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-slate-900/80 p-6 shadow-lg shadow-emerald-500/10">
+      <div className="mb-4 flex items-center justify-between">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">
+            Results
+          </p>
+          <h2 className="text-2xl font-bold text-white">Great run!</h2>
+        </div>
+        <div className="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300">
+          New record
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-4">
+          <h3 className="mb-2 text-sm text-slate-400">Current Test</h3>
+          <p className="text-3xl font-bold text-cyan-300">{wpm} WPM</p>
+          <p className="mt-1 text-lg text-emerald-300">{accuracy}% Accuracy</p>
         </div>
 
-        {/* Personal Best */}
-        <div className="bg-gray-700 p-4 rounded">
-          <h3 className="text-sm text-gray-300 mb-2">Personal Best</h3>
-          <p className="text-2xl font-bold text-yellow-400">
+        <div className="rounded-2xl border border-amber-400/20 bg-slate-900/80 p-4">
+          <h3 className="mb-2 text-sm text-slate-400">Personal Best</h3>
+          <p className="text-3xl font-bold text-amber-300">
             {personalBest.bestWPM} WPM {wpm > personalBest.bestWPM ? "⭐" : ""}
           </p>
-          <p className="text-lg text-yellow-300">
+          <p className="mt-1 text-lg text-amber-200">
             {personalBest.bestAccuracy}% Accuracy {accuracy > personalBest.bestAccuracy ? "🎯" : ""}
           </p>
         </div>
       </div>
 
       {personalBest.lastUpdated && (
-        <p className="text-sm text-gray-400 mt-4">Last updated: {personalBest.lastUpdated}</p>
+        <p className="mt-4 text-sm text-slate-400">Last updated: {personalBest.lastUpdated}</p>
       )}
     </div>
   );
