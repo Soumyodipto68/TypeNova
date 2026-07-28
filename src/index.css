@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: dark;
-  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -12,10 +12,36 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #020617;
+  background: linear-gradient(135deg, #030711 0%, #07111f 45%, #0b1e3a 100%);
+  color: #f4f7ff;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.35);
-  color: white;
+  background: rgba(255, 59, 48, 0.3);
+  color: #ffffff;
+}
+
+.web-lines {
+  background-image:
+    linear-gradient(to bottom, transparent 0%, transparent 92%, rgba(255, 255, 255, 0.08) 92%, rgba(255, 255, 255, 0.08) 100%),
+    linear-gradient(to right, transparent 0%, transparent 92%, rgba(255, 255, 255, 0.08) 92%, rgba(255, 255, 255, 0.08) 100%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent 90%);
+  animation: drift 10s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate3d(-12px, 10px, 0) scale(1.03);
+    opacity: 0.7;
+  }
 }

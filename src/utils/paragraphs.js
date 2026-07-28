@@ -1,21 +1,21 @@
 export const paragraphs = [
-  "Typing regularly improves speed and accuracy while building muscle memory for your fingers. Practicing daily with focus helps you understand key placement and reduces mistakes over time. Consistency is the key to mastering typing skills effectively and confidently in real world scenarios.",
+  "The city lights flickered below as Spider-Man swung between buildings, his suit glowing red and blue against the night sky. He could hear sirens rising from every street corner, and he knew that somewhere in the chaos, someone needed help.",
 
-  "Learning to type faster is not only useful for programmers but also for students and professionals. It helps increase productivity and reduces time spent on simple tasks. Developing this habit early can give you a strong advantage in both academic and professional environments.",
+  "With a sharp web shot, Peter Parker launched himself toward the rooftop of a crumbling warehouse. The wind rushed past him as he thought about the people trapped inside and the danger waiting just beyond the broken windows.",
 
-  "A good typing test application should provide real time feedback and track performance metrics like speed and accuracy. Visual indicators for mistakes and correct input help users quickly improve and stay motivated throughout their practice sessions.",
+  "Every leap felt like a promise. Spider-Man had learned that power meant responsibility, and each rescue was a reminder that courage could be quiet, steady, and brave even when the city was falling apart.",
 
-  "Building projects like typing testers allows developers to improve their logic building and user interface design skills. It also introduces concepts like event handling, state management, and performance optimization in modern web development.",
+  "A sudden tremor shook the ground beneath his feet. He twisted midair, catching a falling beam before it could crush a frightened family. The hero landed hard, but the smile beneath his mask never faded.",
 
-  "Consistency in practice is more important than intensity. Even spending ten minutes daily on typing exercises can lead to significant improvements over time. Small consistent efforts always lead to better long term results.",
+  "The streets of New York were alive with motion, and Spider-Man moved through them like a silver thread in a web of light. He knew the city was never truly alone, because somewhere, someone was always reaching out for help.",
 
-  "Typing speed depends on familiarity with the keyboard layout and regular practice. Avoid looking at the keyboard and focus on the screen to train your brain and fingers to work together more efficiently during typing sessions.",
+  "When the clouds parted, the moonlight painted the skyline in pale blue. Spider-Man paused for one breath, listening to the distant heartbeat of the city before he leaped forward once more.",
 
-  "Accuracy should always come before speed when learning typing. Fast typing with too many mistakes reduces overall efficiency. Once accuracy is achieved, speed will naturally improve with continuous practice and repetition.",
+  "A child pointed upward and shouted, 'Look, it's Spider-Man!' The hero waved back, then vanished into the dark with a burst of motion and confidence that made everyone believe in second chances.",
 
-  "Modern applications use interactive interfaces to engage users and provide better learning experiences. Features like live feedback, animations, and progress tracking make the application more enjoyable and effective.",
+  "The mission was never simple, but Peter Parker had grown used to balancing fear with action. He carried both with him across rooftops, through smoke, and into every dangerous corner of the city.",
 
-  "Developers often start with small projects but gradually improve them into full featured applications. This process helps in understanding real world problems and finding efficient solutions using programming skills.",
+  "At the edge of the bridge, Spider-Man stood still for a moment, watching the river sparkle below. He knew that even in the middle of chaos, there was always hope, and hope had a way of moving faster than fear.",
 
-  "User experience plays a major role in the success of any application. A clean design, smooth interactions, and responsive layout make users more comfortable and encourage them to use the application regularly."
+  "The final web snapped into place, and the night seemed to hold its breath. Spider-Man smiled beneath the mask and launched himself into the sky, ready for whatever the city demanded next."
 ];

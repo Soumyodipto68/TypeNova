@@ -1,18 +1,18 @@
 const TypingBox = ({ text, input, handleChange, handleKeyDown }) => {
   return (
-    <div className="rounded-[24px] border border-white/10 bg-slate-950/70 p-4 shadow-inner shadow-black/20 sm:p-5">
+    <div className="rounded-[24px] border border-[#ff3b30]/25 bg-[#09111d] p-4 shadow-inner shadow-[#4f8cff]/10 sm:p-5">
       <div className="mb-4 flex items-center justify-between">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
-          Prompt
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff3b30]">
+          Web Prompt
         </p>
-        <p className="text-xs text-slate-500">Press Enter to submit</p>
+        <p className="text-xs text-[#7dd3fc]">Press Enter to submit</p>
       </div>
 
-      <p className="mb-5 whitespace-pre-wrap rounded-2xl border border-white/10 bg-slate-900/80 p-4 text-base leading-8 text-slate-300 sm:text-lg">
+      <p className="mb-5 whitespace-pre-wrap rounded-2xl border border-[#4f8cff]/20 bg-[#0f172a] p-4 text-base leading-8 text-[#e2e8f0] sm:text-lg">
         {text.split("").map((char, i) => {
-          let color = "text-slate-300";
+          let color = "text-[#e2e8f0]";
           if (i < input.length) {
-            color = char === input[i] ? "text-emerald-400" : "text-rose-400";
+            color = char === input[i] ? "text-[#60a5fa]" : "text-[#ff3b30]";
           }
           return (
             <span key={i} className={color}>
@@ -26,8 +26,8 @@ const TypingBox = ({ text, input, handleChange, handleKeyDown }) => {
         value={input}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        className="min-h-36 w-full rounded-2xl border border-slate-700 bg-slate-900/90 p-4 text-base text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-        placeholder="Start typing here and watch your progress..."
+        className="min-h-36 w-full rounded-2xl border border-[#4f8cff]/25 bg-[#0f172a] p-4 text-base text-white outline-none transition focus:border-[#ff3b30] focus:ring-2 focus:ring-[#ff3b30]/20"
+        placeholder="Start typing and swing through the city..."
       />
     </div>
   );
