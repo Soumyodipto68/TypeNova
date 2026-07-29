@@ -21,10 +21,10 @@ const Sidebar = ({ selectedIndex, setSelectedIndex }) => {
             className={`w-full rounded-2xl border px-3 py-3 text-left transition ${
               selectedIndex === index
                 ? "border-[#ff3b30]/40 bg-[#ff3b30]/10 text-[#ffdfdf]"
-                : "border-transparent bg-[#111c33] text-[#dbeafe] hover:border-[#4f8cff]/20 hover:bg-[#162544]"
+                : "border-transparent bg-[#111c33] text-[#dbeafe] hover:border-[#4f8cff]/20 hover:bg-[#162544] cursor-nwse-pointer"
             }`}
           >
-            <p className="text-sm font-medium">Paragraph {index + 1}</p>
+            <p className="text-sm font-medium">Story {index + 1}</p>
             <p className="mt-1 text-xs text-[#7dd3fc]">
               {selectedIndex === index ? "Active now" : "Ready to practice"}
             </p>

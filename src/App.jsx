@@ -22,6 +22,7 @@ function App() {
     accuracy,
     isFinished,
     resetGame,
+    closeResult,
     stopTimer,
   } = useTyping(text);
 
@@ -150,13 +151,29 @@ function App() {
             {isFinished && (
               <motion.div
                 key="result"
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.35 }}
-                className="mt-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 px-4 backdrop-blur-sm"
               >
-                <Result wpm={wpm} accuracy={accuracy} />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 12 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 8 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative w-full max-w-lg rounded-[24px] border border-[#ff3b30]/30 bg-[#0f172a]/95 p-6 shadow-[0_20px_45px_rgba(255,59,48,0.25)]"
+                >
+                  <button
+                    type="button"
+                    onClick={closeResult}
+                    className="cursor-pointer absolute right-4 top-4 rounded-full border border-[#4f8cff]/30 bg-[#111c33] px-3 py-1 text-lg text-[#dbeafe] transition hover:border-[#4f8cff] hover:bg-[#162544]"
+                    aria-label="Close results"
+                  >
+                    ×
+                  </button>
+                  <Result wpm={wpm} accuracy={accuracy} />
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>

@@ -8,7 +8,7 @@ const TypingBox = ({ text, input, handleChange, handleKeyDown }) => {
         <p className="text-xs text-[#7dd3fc]">Press Enter to submit</p>
       </div>
 
-      <p className="mb-5 whitespace-pre-wrap rounded-2xl border border-[#4f8cff]/20 bg-[#0f172a] p-4 text-base leading-8 text-[#e2e8f0] sm:text-lg">
+      <p className="mb-5 whitespace-pre-wrap rounded-2xl border border-[#4f8cff]/20 bg-[#0f172a] p-4 text-base leading-8 text-[#e2e8f0] sm:text-lg select-none">
         {text.split("").map((char, i) => {
           let color = "text-[#e2e8f0]";
           if (i < input.length) {
