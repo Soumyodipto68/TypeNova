@@ -66,6 +66,10 @@ export const useTyping = (text) => {
     clearInterval(timerRef.current);
   };
 
+  const closeResult = () => {
+    resetGame();
+  };
+
   return {
     input,
     handleChange,
@@ -75,6 +79,7 @@ export const useTyping = (text) => {
     accuracy,
     isFinished,
     resetGame,
+    closeResult,
     stopTimer,
   };
 };
